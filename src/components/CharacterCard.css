@@ -1,0 +1,9 @@
+.character-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.character-card--attribute {
+  display: flex;
+  flex-direction: column;
+}
