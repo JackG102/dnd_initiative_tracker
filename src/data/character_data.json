@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Sir Applebottom",
+    "hp": 50,
+    "initiative": 10,
+    "notes": "A friendly, if imbecilic, wizard.",
+    "active": true
+  },
+  {
+    "name": "Tiamat",
+    "hp": 2000,
+    "initiative": 30,
+    "notes": "The legendary dragon that is the destroyer of worlds.",
+    "active": true
+  },
+  {
+    "name": "Rrock",
+    "hp": 20,
+    "initiative": 3,
+    "notes": "A Kenku (a crow humanoid) raised by a human family.",
+    "active": true
+  }
+]
