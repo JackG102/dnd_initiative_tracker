@@ -1,16 +1,19 @@
 .app-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 66% 33%;
 }
 
 .initiative_tracker_container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 66%;
   padding: 2rem;
 }
 
+.initiative_tracker_container > div {
+ width: 100%;
+}
+
 .form_container {
-  width: 33%;
   padding: 2rem;
 }

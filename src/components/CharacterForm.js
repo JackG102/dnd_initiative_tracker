@@ -3,8 +3,8 @@ import React from 'react';
 
 const CharacterForm = () => {
   return (
-    <form className="ui form raised very padded text container segment" id="character_form">
-      <h3>Character Form</h3>
+    <form className="ui form raised very padded text segment" id="character_form">
+      <h2>Character Form</h2>
       <div className="ui field">
         <label>Initiative</label>
         <input type="number" name="initiative" />
