@@ -1,24 +1,24 @@
 import './CharacterCard.css';
 import React from 'react';
 
-const CharacterCard = () => {
+const CharacterCard = ({initiative, name, hp, notes}) => {
   return (
     <div className="ui raised very text segment character-card">
       <div className="character-card--attribute">
         <span><strong>Initiative:</strong></span>
-        <span>18</span>
+        <span>{initiative}</span>
       </div>
       <div className="character-card--attribute">
         <span><strong>Character Name:</strong></span>
-        <span>Applebottom</span>
+        <span>{name}</span>
       </div>
       <div className="character-card--attribute">
         <span><strong>HP:</strong></span>
-        <span>40</span>
+        <span>{hp}</span>
       </div>
       <div className="character-card--attribute">
         <span><strong>Notes:</strong></span>
-        <p>Lorem Ipsum</p>
+        <p>{notes}</p>
       </div>
     </div>
   );
