@@ -6,4 +6,6 @@
 .character-card--attribute {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  width: 25%;
 }
