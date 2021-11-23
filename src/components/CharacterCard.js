@@ -1,9 +1,10 @@
 import './CharacterCard.css';
 import React from 'react';
 
-const CharacterCard = ({initiative, name, hp, notes}) => {
+const CharacterCard = ({initiative, name, hp, notes, active}) => {
+  console.log(active);
   return (
-    <div className="ui raised very text segment character-card">
+    <div className={`ui raised very text segment character-card ${ active ? 'is-active' : 'not-active'}`}>
       <div className="character-card--attribute">
         <span><strong>Initiative:</strong></span>
         <span>{initiative}</span>

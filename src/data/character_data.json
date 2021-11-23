@@ -11,13 +11,13 @@
     "hp": 2000,
     "initiative": 30,
     "notes": "The legendary dragon that is the destroyer of worlds.",
-    "active": true
+    "active": false
   },
   {
     "name": "Rrock",
     "hp": 20,
     "initiative": 3,
     "notes": "A Kenku (a crow humanoid) raised by a human family.",
-    "active": true
+    "active": false
   }
 ]

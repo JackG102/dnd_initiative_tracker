@@ -9,3 +9,8 @@
   flex-wrap: wrap;
   width: 25%;
 }
+
+div.character-card.is-active {
+  background: palegoldenrod;
+  border-radius: 20px;
+}

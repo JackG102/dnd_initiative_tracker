@@ -16,6 +16,7 @@ const InitiativeList = ({characterData, setModalVisible}) => {
         hp={el.hp} 
         name={el.name} 
         notes={el.notes}
+        active={el.active}
         key={el.name}
       />
     );
