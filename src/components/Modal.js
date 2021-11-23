@@ -2,7 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './Modal.css';
 
-const Modal = ({ modalVisible, setModalVisible }) => {
+const Modal = ({ modalVisible, setModalVisible, setCharacterData }) => {
+
+  const resetCharacterData = (event) => {
+    event.preventDefault();
+    setCharacterData([]);
+    setModalVisible(!modalVisible);
+  };
+
+  const returnToList = (event) => {
+    event.preventDefault();
+    setModalVisible(!modalVisible);
+  };
+
   return ReactDOM.createPortal(
     <>
     { 
@@ -13,16 +25,16 @@ const Modal = ({ modalVisible, setModalVisible }) => {
         <p>Are you sure that you want to end initiative and reset the character list?</p>
         <div className="modal-link-container ui segmented container">
           <a 
-            href="javascript:void(0)" 
+            href="" 
             className="ui button red"
-            onClick={(event) => {setModalVisible(!modalVisible)}}
+            onClick={(event) => {resetCharacterData(event)}}
           >
             Delete Initiative Order
           </a>
           <a 
             href="javascript:void(0)" 
             className="ui button blue"
-            onClick={(event) => {setModalVisible(!modalVisible)}}
+            onClick={(event) => {returnToList(event)}}
           >
             No! Take me back!
           </a>

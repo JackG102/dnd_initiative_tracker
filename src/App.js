@@ -24,7 +24,11 @@ const App = () => {
       <div className="form_container">
         <CharacterForm />
       </div>
-      <Modal modalVisible={modalVisible} setModalVisible={setModalVisible} />
+      <Modal 
+        modalVisible={modalVisible} 
+        setModalVisible={setModalVisible} 
+        setCharacterData={setCharacterData}
+      />
     </div>
   );
 }
