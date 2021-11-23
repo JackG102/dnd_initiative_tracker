@@ -21,10 +21,6 @@ const CharacterForm = () => {
         <label>Notes</label>
         <input type="text" name="notes" />
       </div>
-      <div className="ui field">
-        <label>Death Roles</label>
-
-      </div>
       <div className="ui checkbox">
         <input type='checkbox' name="is_active" />
         <label>Is Active</label>
