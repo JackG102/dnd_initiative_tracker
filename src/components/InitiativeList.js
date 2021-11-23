@@ -2,7 +2,7 @@ import './InitiativeList.css';
 import React from 'react';
 import CharacterCard from './CharacterCard';
 
-const InitiativeList = ({characterData}) => {
+const InitiativeList = ({characterData, setModalVisible}) => {
   
   //<CharacterCard initiatiative={initiatiative} id={id} name={name} notes={notes}/>
   const renderCharacterCards = characterData.map((el) => {
@@ -25,7 +25,12 @@ const InitiativeList = ({characterData}) => {
           <button className="ui button">Previous Player</button>
           <button className="ui button">Next Player</button>
         </div>
-        <button className="ui red button">Clear Board</button>
+        <button 
+          className="ui red button"
+          onClick={(event) => setModalVisible(true)}
+        >
+          Clear Board
+        </button>
       </div>
     </div>
   );
