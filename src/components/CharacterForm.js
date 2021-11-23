@@ -1,9 +1,24 @@
 import './CharacterForm.css';
 import React from 'react';
 
-const CharacterForm = () => {
+const CharacterForm = ({characterData, setCharacterData}) => {
+  const addCharacter = (event) => {
+    event.preventDefault();
+    const playerData = {};
+    playerData.initiative = event.target[0].value;
+    playerData.name = event.target[1].value;
+    playerData.hp = event.target[2].value;
+    playerData.notes = event.target[3].value;
+    playerData.active = event.target[4].checked;
+    setCharacterData([...characterData, playerData]);
+  };
+
   return (
-    <form className="ui form raised very padded text segment" id="character_form">
+    <form 
+      className="ui form raised very padded text segment" 
+      id="character_form"
+      onSubmit={addCharacter}
+    >
       <h2>Character Form</h2>
       <div className="ui field">
         <label>Initiative</label>

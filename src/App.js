@@ -22,7 +22,10 @@ const App = () => {
         />
       </div>
       <div className="form_container">
-        <CharacterForm />
+        <CharacterForm  
+          characterData={characterData} 
+          setCharacterData={setCharacterData}
+        />
       </div>
       <Modal 
         modalVisible={modalVisible} 
