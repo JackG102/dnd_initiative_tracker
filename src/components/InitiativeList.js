@@ -3,8 +3,7 @@ import React from 'react';
 import CharacterCard from './CharacterCard';
 
 const InitiativeList = ({characterData, setModalVisible}) => {
-  
-  //<CharacterCard initiatiative={initiatiative} id={id} name={name} notes={notes}/>
+
   const renderCharacterCards = characterData.map((el) => {
     return (
       <CharacterCard 
