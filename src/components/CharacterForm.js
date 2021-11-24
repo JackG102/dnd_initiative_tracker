@@ -3,8 +3,8 @@ import React from 'react';
 
 const CharacterForm = ({characterData, setCharacterData}) => {
 
-  // Adds Character data to state by fetching all the form values,
-  // creating a new object, and adding it to the characterData array.
+  // Creating a new object from the Form values, which will eventually
+  // be added to statue after some manipulation.
   const addCharacter = (event) => {
     event.preventDefault();
     const playerData = {};
@@ -27,7 +27,7 @@ const CharacterForm = ({characterData, setCharacterData}) => {
       });
     }
 
-    // Add new character to characterData array now that we done our 'active' logic done, 
+    // Add new character to characterData array now that we done our 'active' logic 
     let newCharacterData = [...oldCharacterData, playerData];
 
     // Sort Character Data by highest to lowest initiative
