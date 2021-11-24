@@ -2,6 +2,9 @@ import './CharacterForm.css';
 import React from 'react';
 
 const CharacterForm = ({characterData, setCharacterData}) => {
+
+  // Adds Character data to state by fetching all the form values,
+  // creating a new object, and adding it to the characterData array.
   const addCharacter = (event) => {
     event.preventDefault();
     const playerData = {};
@@ -10,7 +13,29 @@ const CharacterForm = ({characterData, setCharacterData}) => {
     playerData.hp = event.target[2].value;
     playerData.notes = event.target[3].value;
     playerData.active = event.target[4].checked;
-    setCharacterData([...characterData, playerData]);
+
+    // Make copy of characterData from State object
+    let oldCharacterData = characterData;
+
+    // If new character has 'active' value from form,
+    // make all other existing character data be false for 'active'
+    // In Dungeons and Dragons, only one person can be active at a time.
+    // Note: Refactor code to be more JavaScripty with new syntax. 
+    if (playerData.active === true) {
+      oldCharacterData.map((el) => {
+        el.active = false;
+      });
+    }
+
+    // Add new character to characterData array now that we done our 'active' logic done, 
+    let newCharacterData = [...oldCharacterData, playerData];
+
+    // Sort Character Data by highest to lowest initiative
+    const sortedCharacterData = [...newCharacterData].sort((a, b) => {
+      return b.initiative - a.initiative;
+    });
+
+    setCharacterData(sortedCharacterData);
   };
 
   return (

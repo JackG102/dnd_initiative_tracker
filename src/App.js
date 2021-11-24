@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CharacterForm from './components/CharacterForm';
 import InitiativeList from './components/InitiativeList';
 import Modal from './components/Modal';
@@ -12,6 +12,15 @@ const App = () => {
   
   // State for Modal
   const [modalVisible, setModalVisible] = useState(false);
+
+  useEffect(() => {
+    // Sort Character Data by highest to lowest initiative upon initial load
+    const sortedCharacterData = [...characterData].sort((a, b) => {
+      return b.initiative - a.initiative;
+    });
+    setCharacterData(sortedCharacterData);
+  }, []);
+
 
   return (
     <div className="app-container">

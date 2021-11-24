@@ -3,13 +3,8 @@ import React from 'react';
 import CharacterCard from './CharacterCard';
 
 const InitiativeList = ({characterData, setModalVisible}) => {
-  
-  // Sort Character Data by highest to lowest initiative
-  const sortedCharacterData = [...characterData].sort((a, b) => {
-    return b.initiative - a.initiative;
-  });
 
-  const renderCharacterCards = sortedCharacterData.map((el) => {
+  const renderCharacterCards = characterData.map((el) => {
     return (
       <CharacterCard 
         initiative={el.initiative} 
