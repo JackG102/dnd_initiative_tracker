@@ -20,6 +20,14 @@ const CharacterCard = ({initiative, name, hp, notes, active}) => {
         <span><strong>Notes:</strong></span>
         <p>{notes}</p>
       </div>
+      <div className="character-card--attribute">
+        <button className="ui button blue" style={{marginBottom: '10px'}}>
+          Edit
+        </button>
+        <button className="ui button red">
+          Delete
+        </button>
+      </div>
     </div>
   );
 }

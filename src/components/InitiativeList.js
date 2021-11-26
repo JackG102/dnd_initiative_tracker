@@ -27,7 +27,7 @@ const InitiativeList = ({characterData, setModalVisible}) => {
           <button className="ui button">Next Player</button>
         </div>
         <button 
-          className="ui red button"
+          className="ui button"
           onClick={(event) => setModalVisible(true)}
         >
           Clear Board
