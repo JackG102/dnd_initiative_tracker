@@ -1,12 +1,16 @@
 import './CharacterCard.css';
 import React from 'react';
 
-const CharacterCard = ({initiative, character_name, hp, notes, active, characterData, setCharacterData}) => {
+const CharacterCard = ({initiative, character_name, hp, notes, active, characterData, setCharacterData, editMode, setEditMode}) => {
 
   const deleteCharacter = () => {
     console.log('delete!');
     setCharacterData(characterData.filter((item) => item.character_name !== character_name));
   };
+
+  const addCharacterToEditForm = () => {
+    setEditMode(true);
+  }
 
   return (
     <div className={`ui raised very text segment character-card ${ active ? 'is-active' : 'not-active'}`}>
@@ -27,7 +31,11 @@ const CharacterCard = ({initiative, character_name, hp, notes, active, character
         <p>{notes}</p>
       </div>
       <div className="character-card--attribute">
-        <button className="ui button blue" style={{marginBottom: '10px'}}>
+        <button 
+          className="ui button blue" 
+          style={{marginBottom: '10px'}}
+          onClick={addCharacterToEditForm}
+        >
           Edit
         </button>
         <button className="ui button red" onClick={deleteCharacter}>

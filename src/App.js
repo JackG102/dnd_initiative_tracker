@@ -30,7 +30,9 @@ const App = () => {
       <div className="initiative_tracker_container">
         <InitiativeList 
           characterData={characterData}
-          setCharacterData={setCharacterData} 
+          setCharacterData={setCharacterData}
+          editMode={editMode}
+          setEditMode={setEditMode}
           setModalVisible={setModalVisible}
         />
       </div>
