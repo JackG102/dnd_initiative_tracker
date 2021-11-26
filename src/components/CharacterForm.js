@@ -9,7 +9,7 @@ const CharacterForm = ({characterData, setCharacterData}) => {
     event.preventDefault();
     const playerData = {};
     playerData.initiative = event.target[0].value;
-    playerData.name = event.target[1].value;
+    playerData.character_name = event.target[1].value;
     playerData.hp = event.target[2].value;
     playerData.notes = event.target[3].value;
     playerData.active = event.target[4].checked;
