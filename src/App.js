@@ -13,6 +13,9 @@ const App = () => {
   // State for Modal
   const [modalVisible, setModalVisible] = useState(false);
 
+  // State for Form Edit Mode
+  const [editMode, setEditMode] = useState(false);
+
   useEffect(() => {
     // Sort Character Data by highest to lowest initiative upon initial load
     const sortedCharacterData = [...characterData].sort((a, b) => {
@@ -35,6 +38,8 @@ const App = () => {
         <CharacterForm  
           characterData={characterData} 
           setCharacterData={setCharacterData}
+          editMode={editMode}
+          setEditMode={setEditMode}
         />
       </div>
       <Modal 

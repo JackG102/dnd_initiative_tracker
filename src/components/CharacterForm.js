@@ -1,7 +1,7 @@
 import './CharacterForm.css';
 import React from 'react';
 
-const CharacterForm = ({characterData, setCharacterData}) => {
+const CharacterForm = ({characterData, setCharacterData, editMode, setEditMode}) => {
 
   // Creating a new object from the Form values, which will eventually
   // be added to statue after some manipulation.
@@ -23,7 +23,7 @@ const CharacterForm = ({characterData, setCharacterData}) => {
     // Note: Refactor code to be more JavaScripty with new syntax. 
     if (playerData.active === true) {
       oldCharacterData.map((el) => {
-        el.active = false;
+        return el.active = false;
       });
     }
 
@@ -66,7 +66,9 @@ const CharacterForm = ({characterData, setCharacterData}) => {
         <label>Is Active</label>
       </div>
       <div>
-        <button className="ui button green" type="submit">Add Character</button>
+        <button className="ui button green" type="submit">
+          {editMode ? 'Update Character' : 'Add Character' }
+        </button>
       </div>
     </form>
   );

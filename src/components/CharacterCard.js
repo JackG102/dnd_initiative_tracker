@@ -5,7 +5,7 @@ const CharacterCard = ({initiative, character_name, hp, notes, active, character
 
   const deleteCharacter = () => {
     console.log('delete!');
-    setCharacterData(characterData.filter((item) => item.character_name != character_name));
+    setCharacterData(characterData.filter((item) => item.character_name !== character_name));
   };
 
   return (
