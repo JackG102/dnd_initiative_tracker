@@ -26,7 +26,8 @@ const App = () => {
     <div className="app-container">
       <div className="initiative_tracker_container">
         <InitiativeList 
-          characterData={characterData} 
+          characterData={characterData}
+          setCharacterData={setCharacterData} 
           setModalVisible={setModalVisible}
         />
       </div>
