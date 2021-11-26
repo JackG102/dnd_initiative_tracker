@@ -16,6 +16,13 @@ const App = () => {
   // State for Form Edit Mode
   const [editMode, setEditMode] = useState(false);
 
+  // State for Form
+  const [initiative, setInitiative] = useState(null);
+  const [characterName, setCharacterName] = useState('');
+  const [hp, setHP] = useState(null);
+  const [notes, setNotes] = useState('');
+  const [isActive, setIsActive] = useState(false);
+
   useEffect(() => {
     // Sort Character Data by highest to lowest initiative upon initial load
     const sortedCharacterData = [...characterData].sort((a, b) => {
@@ -34,6 +41,11 @@ const App = () => {
           editMode={editMode}
           setEditMode={setEditMode}
           setModalVisible={setModalVisible}
+          setInitiative={setInitiative}
+          setCharacterName={setCharacterName}
+          setHP={setHP}
+          setNotes={setNotes}
+          setIsActive={setIsActive}
         />
       </div>
       <div className="form_container">
@@ -42,6 +54,17 @@ const App = () => {
           setCharacterData={setCharacterData}
           editMode={editMode}
           setEditMode={setEditMode}
+
+          setInitiative={setInitiative}
+          setCharacterName={setCharacterName}
+          setHP={setHP}
+          setNotes={setNotes}
+          setIsActive={setIsActive}
+          initiative={initiative}
+          characterName={characterName}
+          hp={hp}
+          notes={notes}
+          isActive={isActive}
         />
       </div>
       <Modal 

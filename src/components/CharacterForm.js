@@ -1,7 +1,7 @@
 import './CharacterForm.css';
 import React from 'react';
 
-const CharacterForm = ({characterData, setCharacterData, editMode, setEditMode}) => {
+const CharacterForm = ({characterData, setCharacterData, editMode, setEditMode, initiative, hp, characterName, notes, isActive, setInitiative, setCharacterName, setHP, setNotes, setIsActive }) => {
 
   // Creating a new object from the Form values, which will eventually
   // be added to statue after some manipulation.
@@ -47,22 +47,47 @@ const CharacterForm = ({characterData, setCharacterData, editMode, setEditMode})
       <h2>Character Form</h2>
       <div className="ui field">
         <label>Initiative</label>
-        <input type="number" name="initiative" />
+        <input 
+          type="number" 
+          name="initiative"
+          value={initiative}
+          onChange={e => setInitiative(e.target.value)}
+        />
       </div>
       <div className="ui field">
         <label>Name</label>
-        <input type="text" name="name" />
+        <input 
+          type="text" 
+          name="name" 
+          value={characterName}
+          onChange={e => setCharacterName(e.target.value)}
+        />
       </div>
       <div className="ui field">
         <label>HP</label>
-        <input type="number" name="hp" />
+        <input 
+          type="number" 
+          name="hp"
+          value={hp}
+          onChange={e => setHP(e.target.value)}
+        />
       </div>
       <div className="ui field">
         <label>Notes</label>
-        <input type="text" name="notes" />
+        <input 
+          type="text" 
+          name="notes"
+          value={notes}
+          onChange={e => setNotes(e.target.value)}
+        />
       </div>
       <div className="ui checkbox">
-        <input type='checkbox' name="is_active" />
+        <input 
+          type='checkbox'
+          name="is_active" 
+          checked={isActive}
+          onChange={e => setIsActive(e.target.checked)}
+        />
         <label>Is Active</label>
       </div>
       <div>

@@ -1,7 +1,7 @@
 import './CharacterCard.css';
 import React from 'react';
 
-const CharacterCard = ({initiative, character_name, hp, notes, active, characterData, setCharacterData, editMode, setEditMode}) => {
+const CharacterCard = ({initiative, character_name, hp, notes, active, characterData, setCharacterData, editMode, setEditMode, setInitiative, setCharacterName, setHP, setNotes, setIsActive}) => {
 
   const deleteCharacter = () => {
     console.log('delete!');
@@ -10,6 +10,12 @@ const CharacterCard = ({initiative, character_name, hp, notes, active, character
 
   const addCharacterToEditForm = () => {
     setEditMode(true);
+    setInitiative(initiative);
+    setCharacterName(character_name);
+    setHP(hp);
+    setNotes(notes);
+    setIsActive(active);
+    console.log(active);
   }
 
   return (

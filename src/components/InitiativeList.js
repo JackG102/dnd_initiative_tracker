@@ -2,7 +2,7 @@ import './InitiativeList.css';
 import React from 'react';
 import CharacterCard from './CharacterCard';
 
-const InitiativeList = ({characterData, setCharacterData, editMode, setEditMode, setModalVisible}) => {
+const InitiativeList = ({characterData, setCharacterData, editMode, setEditMode, setModalVisible, setInitiative, setCharacterName, setHP, setNotes, setIsActive}) => {
 
   const renderCharacterCards = characterData.map((el) => {
     return (
@@ -17,6 +17,12 @@ const InitiativeList = ({characterData, setCharacterData, editMode, setEditMode,
         notes={el.notes}
         active={el.active}
         key={el.name}
+
+        setInitiative={setInitiative}
+        setCharacterName={setCharacterName}
+        setHP={setHP}
+        setNotes={setNotes}
+        setIsActive={setIsActive}
       />
     );
   });
