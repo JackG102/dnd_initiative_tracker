@@ -22,6 +22,8 @@ const App = () => {
   const [hp, setHP] = useState(null);
   const [notes, setNotes] = useState('');
   const [isActive, setIsActive] = useState(false);
+  const [uid, setUID] = useState('');
+
 
   useEffect(() => {
     // Sort Character Data by highest to lowest initiative upon initial load
@@ -46,6 +48,8 @@ const App = () => {
           setHP={setHP}
           setNotes={setNotes}
           setIsActive={setIsActive}
+          setUID={setUID}
+
         />
       </div>
       <div className="form_container">
@@ -65,6 +69,7 @@ const App = () => {
           hp={hp}
           notes={notes}
           isActive={isActive}
+          uid={uid}
         />
       </div>
       <Modal 
