@@ -1,6 +1,5 @@
 import './CharacterForm.css';
 import React from 'react';
-import InitiativeList from './InitiativeList';
 
 const CharacterForm = ({characterData, setCharacterData, editMode, setEditMode, initiative, hp, characterName, notes, uid, isActive, setInitiative, setCharacterName, setHP, setNotes, setIsActive }) => {
 
