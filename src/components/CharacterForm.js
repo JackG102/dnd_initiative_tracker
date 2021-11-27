@@ -38,6 +38,13 @@ const CharacterForm = ({characterData, setCharacterData, editMode, setEditMode, 
       });
   
       setCharacterData(sortedCharacterData);
+
+      // Reseting form after Character creation
+      setInitiative('');
+      setCharacterName('');
+      setHP('');
+      setNotes('');
+      setIsActive(false);
     } else {
       event.preventDefault();
       // Need to keep key identifier for index, so the name can change
