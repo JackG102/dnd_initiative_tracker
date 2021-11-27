@@ -17,9 +17,9 @@ const App = () => {
   const [editMode, setEditMode] = useState(false);
 
   // State for Form
-  const [initiative, setInitiative] = useState(null);
+  const [initiative, setInitiative] = useState('');
   const [characterName, setCharacterName] = useState('');
-  const [hp, setHP] = useState(null);
+  const [hp, setHP] = useState('');
   const [notes, setNotes] = useState('');
   const [isActive, setIsActive] = useState(false);
   const [uid, setUID] = useState('');
