@@ -18,6 +18,21 @@ const InitiativeList = ({characterData, setCharacterData, editMode, setEditMode,
     setCharacterData(oldCharacterData);
   };
 
+  const previousPlayer = () => {
+    const checkActivePlayer = (element) => element.active === true;
+    const activePlayer = characterData.findIndex(checkActivePlayer);
+    const arrayLength = characterData.length;
+    let oldCharacterData = [...characterData];
+
+    oldCharacterData.map((el) => {
+      return el.active = false;
+    });
+
+    oldCharacterData[activePlayer - 1] ? oldCharacterData[activePlayer - 1].active = true: oldCharacterData[arrayLength - 1].active = true;
+
+    setCharacterData(oldCharacterData);
+  };
+
   const renderCharacterCards = characterData.map((el) => {
     return (
       <CharacterCard 
@@ -48,7 +63,7 @@ const InitiativeList = ({characterData, setCharacterData, editMode, setEditMode,
       {renderCharacterCards}
       <div className="button_container">
         <div>
-          <button className="ui button">Previous Player</button>
+          <button className="ui button" onClick={previousPlayer}>Previous Player</button>
           <button className="ui button" onClick={nextPlayer}>Next Player</button>
         </div>
         <button 
