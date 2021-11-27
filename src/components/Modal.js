@@ -24,20 +24,18 @@ const Modal = ({ modalVisible, setModalVisible, setCharacterData }) => {
         <h2>Clear Inintiative</h2>
         <p>Are you sure that you want to end initiative and reset the character list?</p>
         <div className="modal-link-container ui segmented container">
-          <a 
-            href="" 
+          <button
             className="ui button red"
             onClick={(event) => {resetCharacterData(event)}}
           >
             Delete Initiative Order
-          </a>
-          <a 
-            href="javascript:void(0)" 
+          </button>
+          <button 
             className="ui button blue"
             onClick={(event) => {returnToList(event)}}
           >
             No! Take me back!
-          </a>
+          </button>
         </div>
       </div>
  
