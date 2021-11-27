@@ -4,6 +4,20 @@ import CharacterCard from './CharacterCard';
 
 const InitiativeList = ({characterData, setCharacterData, editMode, setEditMode, setModalVisible, setInitiative, setCharacterName, setHP, setNotes, setIsActive, setUID}) => {
 
+  const nextPlayer = () => {
+    const checkActivePlayer = (element) => element.active === true;
+    const activePlayer = characterData.findIndex(checkActivePlayer);
+    let oldCharacterData = [...characterData];
+
+    oldCharacterData.map((el) => {
+      return el.active = false;
+    });
+
+    oldCharacterData[activePlayer + 1] ? oldCharacterData[activePlayer + 1].active = true: oldCharacterData[0].active = true;
+
+    setCharacterData(oldCharacterData);
+  };
+
   const renderCharacterCards = characterData.map((el) => {
     return (
       <CharacterCard 
@@ -35,7 +49,7 @@ const InitiativeList = ({characterData, setCharacterData, editMode, setEditMode,
       <div className="button_container">
         <div>
           <button className="ui button">Previous Player</button>
-          <button className="ui button">Next Player</button>
+          <button className="ui button" onClick={nextPlayer}>Next Player</button>
         </div>
         <button 
           className="ui button"
