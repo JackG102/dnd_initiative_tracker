@@ -4,7 +4,7 @@ import React from 'react';
 const CharacterCard = ({initiative, character_name, hp, notes, active, uid, characterData, setCharacterData, setEditMode, setInitiative, setCharacterName, setHP, setNotes, setIsActive, setUID}) => {
 
   const deleteCharacter = () => {
-    setCharacterData(characterData.filter((item) => item.character_name !== character_name));
+    setCharacterData(characterData.filter((item) => item.uid !== uid));
   };
 
   const addCharacterToEditForm = () => {

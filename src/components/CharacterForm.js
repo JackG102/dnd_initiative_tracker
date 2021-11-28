@@ -63,7 +63,8 @@ const CharacterForm = ({characterData, setCharacterData, editMode, setEditMode, 
         'hp': hp,
         'character_name': characterName,
         'notes': notes,
-        'active': isActive
+        'active': isActive,
+        'uid': uid
       };
       
       newCharacterData[index] = editedCharacter;
