@@ -2,7 +2,7 @@
   {
     "character_name": "Sir Applebottom",
     "hp": 50,
-    "initiative": 10,
+    "initiative": 30,
     "notes": "A friendly, if imbecilic, wizard.",
     "active": true,
     "uid": "sir_applebottom_1638096159923"
@@ -10,7 +10,7 @@
   {
     "character_name": "Tiamat",
     "hp": 2000,
-    "initiative": 30,
+    "initiative": 29,
     "notes": "The legendary dragon that is the destroyer of worlds.",
     "active": false,
     "uid": "tiamat_1638096255905"
