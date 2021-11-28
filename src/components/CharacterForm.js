@@ -47,7 +47,7 @@ const CharacterForm = ({characterData, setCharacterData, editMode, setEditMode, 
     } else {
       event.preventDefault();
       // Need to keep key identifier for index, so the name can change
-      const index = characterData.findIndex(el => el.character_name === uid);
+      const index = characterData.findIndex(el => el.uid === uid);
 
       // Make copy of characterData from State object
       let newCharacterData = [...characterData];

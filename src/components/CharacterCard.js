@@ -1,7 +1,7 @@
 import './CharacterCard.css';
 import React from 'react';
 
-const CharacterCard = ({initiative, character_name, hp, notes, active, characterData, setCharacterData, setEditMode, setInitiative, setCharacterName, setHP, setNotes, setIsActive, setUID}) => {
+const CharacterCard = ({initiative, character_name, hp, notes, active, uid, characterData, setCharacterData, setEditMode, setInitiative, setCharacterName, setHP, setNotes, setIsActive, setUID}) => {
 
   const deleteCharacter = () => {
     setCharacterData(characterData.filter((item) => item.character_name !== character_name));
@@ -14,7 +14,7 @@ const CharacterCard = ({initiative, character_name, hp, notes, active, character
     setHP(hp);
     setNotes(notes);
     setIsActive(active);
-    setUID(character_name);
+    setUID(uid);
   }
 
   return (
