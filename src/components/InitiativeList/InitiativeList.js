@@ -1,6 +1,6 @@
 import './InitiativeList.css';
 import React from 'react';
-import CharacterCard from './CharacterCard';
+import CharacterCard from '../CharacterCard/CharacterCard';
 
 const InitiativeList = ({characterData, setCharacterData, editMode, setEditMode, setModalVisible, setInitiative, setCharacterName, setHP, setNotes, setIsActive, setUID}) => {
 

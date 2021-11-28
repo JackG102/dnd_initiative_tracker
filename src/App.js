@@ -1,8 +1,8 @@
 import './App.css';
 import React, { useState } from 'react';
-import CharacterForm from './components/CharacterForm';
-import InitiativeList from './components/InitiativeList';
-import Modal from './components/Modal';
+import CharacterForm from './components/CharacterForm/CharacterForm';
+import InitiativeList from './components/InitiativeList/InitiativeList';
+import Modal from './components/Modal/Modal';
 
 const App = () => {
   
