@@ -14,7 +14,8 @@ const CharacterForm = ({characterData, setCharacterData, editMode, setEditMode, 
       playerData.hp = hp;
       playerData.notes = notes;
       playerData.active = isActive;
-  
+      playerData.uid = `${characterName}_${Date.now()}`;
+      
       // Make copy of characterData from State object
       let oldCharacterData = characterData;
   
@@ -37,7 +38,6 @@ const CharacterForm = ({characterData, setCharacterData, editMode, setEditMode, 
       });
   
       setCharacterData(sortedCharacterData);
-
       // Reseting form after Character creation
       setInitiative('');
       setCharacterName('');
