@@ -4,20 +4,23 @@
     "hp": 50,
     "initiative": 10,
     "notes": "A friendly, if imbecilic, wizard.",
-    "active": true
+    "active": true,
+    "uid": "sir_applebottom_1638096159923"
   },
   {
     "character_name": "Tiamat",
     "hp": 2000,
     "initiative": 30,
     "notes": "The legendary dragon that is the destroyer of worlds.",
-    "active": false
+    "active": false,
+    "uid": "tiamat_1638096255905"
   },
   {
     "character_name": "Rrock",
     "hp": 20,
     "initiative": 3,
     "notes": "A Kenku (a crow humanoid) raised by a human family.",
-    "active": false
+    "active": false,
+    "uid": "rrock_1638096282035"
   }
 ]
