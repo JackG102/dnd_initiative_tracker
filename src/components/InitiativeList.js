@@ -45,7 +45,7 @@ const InitiativeList = ({characterData, setCharacterData, editMode, setEditMode,
         character_name={el.character_name} 
         notes={el.notes}
         active={el.active}
-        key={el.name}
+        key={el.uid}
 
         setInitiative={setInitiative}
         setCharacterName={setCharacterName}
